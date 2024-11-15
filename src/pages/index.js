@@ -1,4 +1,5 @@
 import Page from "@/components/Page";
+import ProjectCard from "@/components/ProjectCard";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
@@ -87,13 +88,59 @@ export default function Home() {
 			{/* Section for project cards */}
 			<div
 				ref={projectsRef}
-				className="h-screenMinusNavbar p-2 flex justify-center items-center"
+				className="h-full p-2 flex flex-col gap-4 min-h-screen justify-center items-center"
 			>
+				{/* section header */}
+				<div>
+					<h1 className="font-bold uppercase">Project Showcase</h1>
+				</div>
 				{/* div for the projects */}
-				<div className="w-full h-full grid sm:grid-cols-[1fr,1fr,1fr] gap-2">
-					<div className="border w-full h-full"></div>
-					<div className="border w-full h-full"></div>
-					<div className="border w-full h-full"></div>
+				<div className="w-full h-full sm:h-[60vh] sm:w-[80vw] grid sm:grid-cols-[1fr,1fr] md:grid-cols-[1fr,1fr,1fr] gap-4">
+					<ProjectCard
+						projectName="SUS Contracting"
+						description="A public facing website for a construction company."
+						tags={[
+							"React",
+							"Next.js",
+							"HTML",
+							"JS",
+							"CSS",
+							"Strapi",
+							"Tailwind",
+						]}
+						imageSrc="/images/sus.png"
+						imgContain
+					/>
+					<ProjectCard
+						projectName="LincolnGuessr"
+						description="A geoguessr clone for the town of Lincoln, Ontario."
+						tags={[
+							"React",
+							"Next.js",
+							"HTML",
+							"JS",
+							"CSS",
+							"Strapi",
+							"Tailwind",
+						]}
+						imageSrc="/images/sus.png"
+						imgContain
+					/>
+					<ProjectCard
+						projectName="WMBA"
+						description="A baseball scorekeeping application."
+						tags={[
+							"C#",
+							".NET",
+							"EF Core",
+							"JSON",
+							"JS",
+							"JQuery",
+							"Bootstrap",
+						]}
+						imageSrc="/images/sus.png"
+						imgContain
+					/>
 				</div>
 			</div>
 		</Page>
