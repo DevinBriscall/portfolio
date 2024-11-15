@@ -36,7 +36,7 @@ export default function ProjectCard({
 								return (
 									<div
 										key={tag + i}
-										className="bg-ruby rounded-sm px-4 h-6 text-offwhite  font-bold flex justify-center items-center"
+										className="bg-secondary rounded-sm px-4 h-6 text-offwhite  font-bold flex justify-center items-center"
 									>
 										<span className="m-0 p-0 select-none">{tag}</span>
 									</div>

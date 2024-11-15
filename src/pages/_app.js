@@ -6,6 +6,7 @@ import NavBar from "@/components/NavBar";
 const saira = Saira({ subsets: ["latin"] });
 import { Providers } from "./providers";
 import ThemeSwitch from "@/components/ThemeSwitch";
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }) {
 	const [isMounted, setIsMounted] = useState(false);
@@ -14,8 +15,7 @@ export default function App({ Component, pageProps }) {
 		setIsMounted(true);
 	}, []);
 
-	
-
+	const router = useRouter();
 
 	return (
 		<>
@@ -27,7 +27,7 @@ export default function App({ Component, pageProps }) {
 
 			<main className="bg-primary-light dark:bg-primary-dark transition-colors duration-700">
 				<Providers>
-					<NavBar />
+					{router.pathname != "/lincolnguessr" && <NavBar />}
 					{isMounted && (
 						<Toaster
 							position="bottom-left"

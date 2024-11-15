@@ -15,7 +15,7 @@ module.exports = {
 				},
 				offwhite: "var(--offwhite)",
 				charcoal: "var(--charcoal)",
-				ruby: "var(--ruby)",
+				secondary: "var(--secondary)",
 			},
 			height: {
 				navbar: "72px",

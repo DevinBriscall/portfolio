@@ -121,10 +121,11 @@ export default function Home() {
 							"JS",
 							"CSS",
 							"Strapi",
-							"Tailwind",
+							"styled jsx",
 						]}
 						imageSrc="/images/sus.png"
 						imgContain
+						href="/lincolnguessr"
 					/>
 					<ProjectCard
 						projectName="WMBA"
