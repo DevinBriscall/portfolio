@@ -239,7 +239,7 @@ export default function LincolnGuessr() {
 		setPickedLocation(null);
 		setRank(null);
 		//pick three random locations
-		setLocations(getRandomEntries(allLocations, 1));
+		setLocations(getRandomEntries(allLocations, 3));
 	}
 
 	function handleLocationPicked(longLat) {
@@ -409,7 +409,6 @@ export default function LincolnGuessr() {
 							/>
 							<div className="guess-button">
 								<Button
-									type="green"
 									disabled={pickedLocation === null}
 									onClick={handleGuessConfirmed}
 								>

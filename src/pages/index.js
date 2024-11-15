@@ -9,6 +9,7 @@ import { FiChevronDown } from "react-icons/fi";
 export default function Home() {
 	const router = useRouter();
 	const [headerText, setHeaderText] = useState(""); // State for the rendered text
+	const [fadeImageIn, setFadeImageIn] = useState(false);
 	const nameText = "Devin Briscall";
 	const descriptionText = "Computer Programmer Analyst.";
 	const tempTextRef = useRef("");
@@ -17,6 +18,7 @@ export default function Home() {
 
 	useEffect(() => {
 		if (!router.isReady) return;
+		setFadeImageIn(true);
 
 		let index = 0;
 
@@ -40,9 +42,23 @@ export default function Home() {
 			const targetPosition =
 				bioRef.current.getBoundingClientRect().top + window.pageYOffset;
 
-			// Scroll to the target position with an offset of 72px
+			// Scroll to the target position with an offset of 68px
 			window.scrollTo({
-				top: targetPosition - 72,
+				top: targetPosition - 68,
+				behavior: "smooth",
+			});
+		}
+	};
+
+	const handleScrollToProjects = () => {
+		if (projectsRef.current) {
+			// Get the position of the element
+			const targetPosition =
+				projectsRef.current.getBoundingClientRect().top + window.pageYOffset;
+
+			// Scroll to the target position with an offset of 68px
+			window.scrollTo({
+				top: targetPosition - 68,
 				behavior: "smooth",
 			});
 		}
@@ -51,10 +67,14 @@ export default function Home() {
 	return (
 		<Page noPadding>
 			{/* profile image section */}
-			<div className="h-screenMinusNavbar flex flex-col p-2">
-				<div className="flex-grow flex flex-col items-center justify-center">
+			<div className="h-screenMinusNavbar flex flex-col p-2 border-b-4 box-border">
+				<div className="flex-grow flex flex-col items-center justify-center ">
 					{/* Profile Image */}
-					<div className="rounded-full w-[280px] h-[280px] drop-shadow-lg mb-5">
+					<div
+						className={`rounded-full w-[280px] h-[280px] drop-shadow-lg mb-5 transition-opacity duration-1000 ${
+							fadeImageIn ? "opacity-100 " : "opacity-0 "
+						}`}
+					>
 						<Image
 							alt="a picture of me"
 							src="/images/profile.jfif"
@@ -72,19 +92,13 @@ export default function Home() {
 
 				{/* Down Arrow */}
 				<div
-					className="w-full flex justify-center animate-bounce hover:cursor-pointer"
-					onClick={handleScrollToBio}
+					className="flex justify-center animate-bounce hover:cursor-pointer"
+					onClick={handleScrollToProjects}
 				>
 					<FiChevronDown size={40} />
 				</div>
 			</div>
-			{/* Bio / Mission Statement */}
-			<div
-				ref={bioRef}
-				className="bg-charcoal text-offwhite dark:text-charcoal dark:bg-offwhite h-screenMinusNavbar"
-			>
-				<p>BIO STUFF</p>
-			</div>
+
 			{/* Section for project cards */}
 			<div
 				ref={projectsRef}
@@ -95,7 +109,7 @@ export default function Home() {
 					<h1 className="font-bold uppercase">Project Showcase</h1>
 				</div>
 				{/* div for the projects */}
-				<div className="w-full h-full sm:h-[60vh] sm:w-[80vw] grid sm:grid-cols-[1fr,1fr] md:grid-cols-[1fr,1fr,1fr] gap-4">
+				<div className="w-full h-full md:w-[80vw] grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
 					<ProjectCard
 						projectName="SUS Contracting"
 						description="A public facing website for a construction company."
@@ -108,8 +122,11 @@ export default function Home() {
 							"Strapi",
 							"Tailwind",
 						]}
+						emphasizedTags={["Team Lead"]}
 						imageSrc="/images/sus.png"
 						imgContain
+						href="https://main.d1jtfh29tegizz.amplifyapp.com/"
+						openInNewTab
 					/>
 					<ProjectCard
 						projectName="LincolnGuessr"
@@ -123,8 +140,7 @@ export default function Home() {
 							"Strapi",
 							"styled jsx",
 						]}
-						imageSrc="/images/sus.png"
-						imgContain
+						imageSrc="/images/lincolnGuessr.jpg"
 						href="/lincolnguessr"
 					/>
 					<ProjectCard
@@ -139,10 +155,24 @@ export default function Home() {
 							"JQuery",
 							"Bootstrap",
 						]}
-						imageSrc="/images/sus.png"
-						imgContain
+						emphasizedTags={["School Community Project Winner"]}
 					/>
 				</div>
+				{/* Down Arrow */}
+				<div
+					className="flex justify-center animate-bounce hover:cursor-pointer"
+					onClick={handleScrollToBio}
+				>
+					<FiChevronDown size={40} />
+				</div>
+			</div>
+
+			{/* Bio / Mission Statement */}
+			<div
+				ref={bioRef}
+				className="bg-charcoal text-offwhite dark:text-charcoal dark:bg-offwhite h-screenMinusNavbar"
+			>
+				<p>BIO STUFF</p>
 			</div>
 		</Page>
 	);

@@ -4,8 +4,7 @@ import { Toaster } from "react-hot-toast";
 import { useEffect, useState } from "react";
 import NavBar from "@/components/NavBar";
 const saira = Saira({ subsets: ["latin"] });
-import { Providers } from "./providers";
-import ThemeSwitch from "@/components/ThemeSwitch";
+import { Providers } from "@/components/providers";
 import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }) {

@@ -31,8 +31,8 @@ export default function Leaderboard({ mode = 0, userScore }) {
 				setTop3(
 					data.data.map((score) => {
 						return {
-							alias: score.attributes.alias,
-							score: score.attributes.score,
+							alias: score.alias,
+							score: score.score,
 						};
 					})
 				);
@@ -57,7 +57,7 @@ export default function Leaderboard({ mode = 0, userScore }) {
 					{top3.length > 0 &&
 						top3.map((entry, index) => {
 							return (
-								<div className="grid-row">
+								<div key={entry + index} className="grid-row">
 									<div className={`cell${index + 1}-1 cell`}>
 										<FontAwesomeIcon icon={faCrown} />
 									</div>
