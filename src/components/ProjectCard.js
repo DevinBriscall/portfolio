@@ -14,7 +14,7 @@ export default function ProjectCard({
 }) {
 	return (
 		<Link href={href} target={openInNewTab ? "_blank" : ""}>
-			<div className="grid min-h-[400px] sm:hover:scale-105 hover:cursor-pointer transition-scale duration-500 grid-rows-2 w-full h-full text-offwhite bg-charcoal dark:border dark:border-slate-700 opacity-95 rounded drop-shadow-lg">
+			<div className="grid min-h-[500px] sm:hover:scale-105 hover:cursor-pointer transition-scale duration-500 grid-rows-2 w-full h-full text-offwhite bg-charcoal dark:border dark:border-slate-700 opacity-95 rounded drop-shadow-lg">
 				<div className="relative m-2 overflow-hidden">
 					<Image
 						alt={`${projectName} image`}

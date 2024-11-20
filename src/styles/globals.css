@@ -4,6 +4,10 @@
 
 :root {
 	--charcoal: #26272b;
-	--offwhite: #f1f1f1;
+	--offwhite: #eaeaea;
 	--secondary: #4158ce;
 }
+/* 
+* {
+	border: 1px solid red;
+} */

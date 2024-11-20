@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import toast from "react-hot-toast";
 import { FiChevronDown } from "react-icons/fi";
+import Link from "next/link";
 
 export default function Home() {
 	const router = useRouter();
@@ -67,11 +68,11 @@ export default function Home() {
 	return (
 		<Page noPadding>
 			{/* profile image section */}
-			<div className="h-screenMinusNavbar flex flex-col p-2 border-b-4 box-border">
+			<div className="h-screenMinusNavbar flex flex-col p-2 box-border">
 				<div className="flex-grow flex flex-col items-center justify-center ">
 					{/* Profile Image */}
 					<div
-						className={`rounded-full w-[280px] h-[280px] drop-shadow-lg mb-5 transition-opacity duration-1000 ${
+						className={`rounded-full border-4 hover:scale-105 border-charcoal dark:border-offwhite w-[280px] h-[280px] drop-shadow-lg mb-5 transition-all duration-1000 ${
 							fadeImageIn ? "opacity-100 " : "opacity-0 "
 						}`}
 					>
@@ -98,6 +99,9 @@ export default function Home() {
 					<FiChevronDown size={40} />
 				</div>
 			</div>
+
+			{/* page divider */}
+			<div className="h-1 bg-charcoal dark:bg-offwhite"></div>
 
 			{/* Section for project cards */}
 			<div
@@ -167,12 +171,54 @@ export default function Home() {
 				</div>
 			</div>
 
+			{/* page divider */}
+			<div className="h-1 bg-charcoal dark:bg-offwhite"></div>
+
 			{/* Bio / Mission Statement */}
 			<div
 				ref={bioRef}
-				className="bg-charcoal text-offwhite dark:text-charcoal dark:bg-offwhite h-screenMinusNavbar"
+				className="relative h-screenMinusNavbar flex flex-col gap-8 px-2 md:px-6"
 			>
-				<p>BIO STUFF</p>
+				{/* Biography */}
+				<section>
+					<h2 className="font-bold text-lg">Biography</h2>
+					<p>
+						I am a Web Development Team Lead at a non-profit organization,
+						guiding a team of four in building websites for local businesses. My
+						skills in React, JavaScript, SQL, and C# enable me to develop
+						efficient solutions that meet clients&apos; needs.
+					</p>
+					<p className="mt-4">
+						Recently, I created an app for a restaurant owner to streamline
+						supplier communication and price comparison, reinforcing my
+						commitment to solving real-world problems. I am also enrolled in the
+						Computer Programming and Analysis Co-op program at Niagara College,
+						maintaining a 97% GPA across four completed terms. Outside of work,
+						I&apos;m a self-taught musician in piano, drums, and guitar,
+						reflecting my passion for continuous learning.
+					</p>
+				</section>
+				{/* Mission */}
+				<section>
+					<h2 className="font-bold text-lg">Mission</h2>
+					<div className="grid gap-2">
+						<p>
+							<strong>Continuous Learning:</strong> Expanding my knowledge
+							drives creativity and helps me build adaptable, impactful
+							applications.
+						</p>
+						<p>
+							<strong>Empowering People Through Efficiency:</strong> I strive to
+							simplify processes, enhancing productivity so people can focus on
+							what matters most.
+						</p>
+						<p>
+							<strong>Focused Independence Creates Quality:</strong> I perform
+							best in environments with autonomy, allowing deep focus and
+							high-quality results.
+						</p>
+					</div>
+				</section>
 			</div>
 		</Page>
 	);
