@@ -1,0 +1,27 @@
+[{
+    "image": "/images/lincolnguessr/charles.jpg",
+    "descriptor": "Charles Daley Park",
+    "Location": {
+        "long": -79.3257506,
+        "lat": 43.1816624,
+        "address": "1969 N Service Rd, Lincoln, ON L0R 1S0"
+    }
+},
+{
+    "image": "/images/lincolnguessr/lakehouse.jpg",
+    "descriptor": "Lake House Restaurant",
+    "Location": {
+        "long": -79.3817353,
+        "lat": 43.186764,
+        "address": "3100 N Service Rd, Vineland Station, ON L0R 2E0"
+    }
+},
+{
+    "image": "/images/lincolnguessr/redstone.jpg",
+    "descriptor": "Redstone Winery",
+    "Location": {
+        "long": -79.4375526,
+        "lat": 43.1593167,
+        "address": "4245 King St, Beamsville, ON L3J 1E4"
+    }
+}]

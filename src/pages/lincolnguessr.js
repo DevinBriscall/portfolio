@@ -45,20 +45,15 @@ export default function LincolnGuessr() {
 
 	async function getLocations(onError = () => {}) {
 		try {
-			console.log(
-				`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/lincoln-guessr-locations?populate=*&pagination[pageSize]=1000`
-			);
-			const response = await fetch(
-				`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/lincoln-guessr-locations?populate=*&pagination[pageSize]=1000`
-			);
+			const response = await fetch(`/lincolnguessr/locations.json`);
 
 			if (!response.ok) {
 				throw new Error(`HTTP error! Status: ${response.status}`);
 			}
 
 			const data = await response.json();
-			setAllLocations(data.data);
-			console.log(data.data);
+			setAllLocations(data);
+			console.log("DATA", data);
 		} catch (error) {
 			console.error("Failed to fetch data from Strapi:", error);
 			onError();
@@ -74,11 +69,11 @@ export default function LincolnGuessr() {
 
 	function transformData(data) {
 		return {
-			name: data.Descriptor,
-			imagePath: `${process.env.NEXT_PUBLIC_STRAPI_API_URL}${data.Image.url}`,
-			lat: data.Location.Latitude,
-			long: data.Location.Longitude,
-			address: data.Location.Address,
+			name: data.descriptor,
+			imagePath: data.image,
+			lat: data.Location.lat,
+			long: data.Location.long,
+			address: data.Location.address,
 		};
 	}
 
