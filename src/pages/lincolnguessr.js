@@ -177,43 +177,20 @@ export default function LincolnGuessr() {
 			//create the score entry
 			async function saveScore() {
 				//create the new score entry
-				const newScore = await fetch(
-					`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/lincoln-guessr-scores`,
-					{
-						method: "POST",
-						headers: {
-							"Content-Type": "application/json",
+				const newScore = await fetch(`/api/leaderboard`, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						data: {
+							alias: alias,
+							score: totalScore,
 						},
-						body: JSON.stringify({
-							data: {
-								alias: alias,
-								score: totalScore,
-							},
-						}),
-					}
-				)
-					.then((response) => response.json())
-					.then((data) => data.data); // Save the newly added score data
+					}),
+				}).then((response) => response.json());
 
-				//get all the scores
-				const allScores = await fetch(
-					`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/lincoln-guessr-scores?sort=score:desc&pagination[pageSize]=1000`
-				)
-					.then((response) => response.json())
-					.then((data) => data.data);
-
-				//determine the rank
-				const newScoreId = newScore.id;
-				let rank = -1;
-
-				for (let i = 0; i < allScores.length; i++) {
-					if (allScores[i].id === newScoreId) {
-						rank = i + 1;
-						break;
-					}
-				}
-
-				setRank(rank);
+				setRank(newScore.rank);
 			}
 
 			await saveScore();

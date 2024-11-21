@@ -18,9 +18,12 @@ export default function Leaderboard({ mode = 0, userScore }) {
 		console.log("user Score", userScore);
 		async function getScores() {
 			try {
-				const response = await fetch(
-					`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/lincoln-guessr-scores?populate=*&sort=score:desc&pagination[pageSize]=3`
-				);
+				const response = await fetch(`/api/leaderboard`, {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json",
+					},
+				});
 
 				if (!response.ok) {
 					throw new Error(`HTTP error! Status: ${response.status}`);
@@ -29,7 +32,7 @@ export default function Leaderboard({ mode = 0, userScore }) {
 				const data = await response.json();
 
 				setTop3(
-					data.data.map((score) => {
+					data.slice(0, 3).map((score) => {
 						return {
 							alias: score.alias,
 							score: score.score,
@@ -37,7 +40,7 @@ export default function Leaderboard({ mode = 0, userScore }) {
 					})
 				);
 			} catch (error) {
-				console.log("Failed to fetch data from Strapi:", error);
+				console.log("Failed to fetch leaderboard data:", error);
 			}
 		}
 
