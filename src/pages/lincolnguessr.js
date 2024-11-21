@@ -288,8 +288,8 @@ export default function LincolnGuessr() {
 				<style jsx>{`
 					.page {
 						background-color: #161629;
-						height: 100vh;
-						width: 100vw;
+						height: 100dvh;
+						width: 100dvw;
 						display: flex;
 						justify-content: center;
 						align-items: center;
@@ -340,7 +340,7 @@ export default function LincolnGuessr() {
 						background: white;
 						color: black;
 						max-width: 700px;
-						width: 90vw;
+						width: 90dvw;
 						height: 60px;
 						border: none;
 						border-radius: 8px;
@@ -427,8 +427,8 @@ export default function LincolnGuessr() {
 				</div>
 				<style jsx>{`
 					.page {
-						height: 100vh;
-						width: 100vw;
+						height: 100dvh;
+						width: 100dvw;
 						display: flex;
 						justify-content: center;
 						align-items: center;
@@ -488,16 +488,16 @@ export default function LincolnGuessr() {
 
 					.image-display {
 						position: relative;
-						width: 100vw;
-						height: 100vh;
+						width: 100dvw;
+						height: 100dvh;
 						overflow-x: hidden;
 						z-index: 0;
 					}
 
 					.image-container {
 						position: relative;
-						width: 100vw;
-						height: 100vh;
+						width: 100dvw;
+						height: 100dvh;
 					}
 
 					.geo-image {
@@ -582,13 +582,13 @@ export default function LincolnGuessr() {
 						.image-display {
 							overflow-x: scroll;
 							overflow-y: hidden;
-							width: 100vw;
-							height: 100vh;
+							width: 100dvw;
+							height: 100dvh;
 						}
 
 						.image-container {
-							width: 200vw; /* Twice the viewport width for scrolling */
-							height: 100vh; /* Full height of viewport */
+							width: 200dvw; /* Twice the viewport width for scrolling */
+							height: 100dvh; /* Full height of viewport */
 						}
 
 						.geo-image {
@@ -666,8 +666,8 @@ export default function LincolnGuessr() {
 				<style jsx>{`
 					.page {
 						background-color: #161629;
-						height: 100vh;
-						width: 100vw;
+						height: 100dvh;
+						width: 100dvw;
 						display: flex;
 						justify-content: center;
 						align-items: center;
@@ -733,7 +733,7 @@ export default function LincolnGuessr() {
 
 					.score-bar {
 						background-color: #42424d;
-						width: 98vw;
+						width: 98dvw;
 						max-width: 400px;
 						height: 10px;
 						border-radius: 4px;
@@ -747,7 +747,7 @@ export default function LincolnGuessr() {
 					}
 
 					.map {
-						width: 100vw;
+						width: 100dvw;
 						max-width: 680px;
 						height: 330px;
 						background-color: white;
@@ -809,15 +809,15 @@ export default function LincolnGuessr() {
 				<style jsx>{`
 					.page {
 						background-color: #161629;
-						height: 100vh;
-						width: 100vw;
+						height: 100dvh;
+						width: 100dvw;
 						display: flex;
 						justify-content: center;
 						align-items: center;
 					}
 
 					.leaderboard {
-						width: 95vw;
+						width: 95dvw;
 						max-width: 640px;
 						height: 260px;
 					}
