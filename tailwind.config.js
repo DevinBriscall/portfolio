@@ -21,6 +21,9 @@ module.exports = {
 				navbar: "72px",
 				screenMinusNavbar: "calc(100vh - 72px)",
 			},
+			minHeight: {
+				screenMinusNavbar: "calc(100vh - 72px)",
+			},
 			borderColor: {
 				DEFAULT: "var(--charcoal)", // Light mode default
 				dark: "var(--offwhite)", // Dark mode default

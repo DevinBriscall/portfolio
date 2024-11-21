@@ -7,7 +7,27 @@
 	--offwhite: #eaeaea;
 	--secondary: #4158ce;
 }
-/* 
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--secondary); /* Thumb color */
+	border-radius: 4px; /* Rounded edges for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--offwhite); /* Lighter color when hovered */
+}
+
 * {
-	border: 1px solid red;
-} */
+	scrollbar-width: thin; /* Makes scrollbar thin */
+	scrollbar-color: var(--charcoal) var(--offwhite); /* Thumb and track colors */
+}

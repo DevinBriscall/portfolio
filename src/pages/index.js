@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import toast from "react-hot-toast";
 import { FiChevronDown } from "react-icons/fi";
 import Link from "next/link";
+import ImageGallery from "@/components/imageGallery";
 
 export default function Home() {
 	const router = useRouter();
@@ -72,7 +73,7 @@ export default function Home() {
 				<div className="flex-grow flex flex-col items-center justify-center ">
 					{/* Profile Image */}
 					<div
-						className={`rounded-full border-4 hover:scale-105 border-charcoal dark:border-offwhite w-[280px] h-[280px] drop-shadow-lg mb-5 transition-all duration-1000 ${
+						className={`rounded-full hover:scale-105 w-[280px] h-[280px] drop-shadow-lg mb-5 transition-all duration-1000 ${
 							fadeImageIn ? "opacity-100 " : "opacity-0 "
 						}`}
 					>
@@ -93,9 +94,10 @@ export default function Home() {
 
 				{/* Down Arrow */}
 				<div
-					className="flex justify-center animate-bounce hover:cursor-pointer"
+					className="flex flex-col items-center animate-bounce hover:cursor-pointer"
 					onClick={handleScrollToProjects}
 				>
+					<span className="font-bold">My Projects</span>
 					<FiChevronDown size={40} />
 				</div>
 			</div>
@@ -106,14 +108,14 @@ export default function Home() {
 			{/* Section for project cards */}
 			<div
 				ref={projectsRef}
-				className="h-full p-2 flex flex-col gap-4 min-h-screen justify-center items-center"
+				className="min-h-screenMinusNavbar box-border py-4 flex flex-col justify-between items-center"
 			>
 				{/* section header */}
 				<div>
 					<h1 className="font-bold uppercase">Project Showcase</h1>
 				</div>
 				{/* div for the projects */}
-				<div className="w-full h-full md:w-[80vw] grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+				<div className="w-full h-full md:w-[80vw] p-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
 					<ProjectCard
 						projectName="SUS Contracting"
 						description="A public facing website for a construction company."
@@ -160,13 +162,17 @@ export default function Home() {
 							"Bootstrap",
 						]}
 						emphasizedTags={["School Community Project Winner"]}
+						openInNewTab
+						href="/projects/wmba"
+						imageSrc="/images/wmba/logo/logo.jpg"
 					/>
 				</div>
 				{/* Down Arrow */}
 				<div
-					className="flex justify-center animate-bounce hover:cursor-pointer"
+					className="flex flex-col items-center animate-bounce hover:cursor-pointer mt-4"
 					onClick={handleScrollToBio}
 				>
+					<span className="font-bold">My Bio</span>
 					<FiChevronDown size={40} />
 				</div>
 			</div>
