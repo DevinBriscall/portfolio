@@ -79,7 +79,7 @@ export default function Home() {
 					>
 						<Image
 							alt="a picture of me"
-							src="/images/profile.jfif"
+							src="/images/profile.png"
 							className="rounded-full"
 							fill={true}
 							quality={100}
