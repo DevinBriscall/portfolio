@@ -24,4 +24,22 @@
         "lat": 43.1593167,
         "address": "4245 King St, Beamsville, ON L3J 1E4"
     }
+},
+{
+    "image": "/images/lincolnguessr/twenty-valley.jpg",
+    "descriptor": "Twenty Valley Golf & Country Club",
+    "Location": {
+        "long": -79.4165969,
+        "lat": 43.1209319,
+        "address": "3814 Yonge St, Vineland, ON L0R 2C0"
+    }
+},
+{
+    "image": "/images/lincolnguessr/balls-falls.jpg",
+    "descriptor": "Ball's Falls Conservation Area",
+    "Location": {
+        "long": -79.3858431,
+        "lat": 43.1327069,
+        "address": "3292 Sixth Ave, Lincoln, ON L0R 1S0"
+    }
 }]
