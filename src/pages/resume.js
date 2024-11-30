@@ -5,7 +5,7 @@ export default function resume() {
 		<>
 			<div className="h-screenMinusNavbar">
 				<p className="text-center">
-					If the resume does not load automatically,{" "}
+					If my resume does not load automatically,{" "}
 					<a
 						href="/docs/resume.pdf"
 						target="_blank"

@@ -27,7 +27,6 @@ export default function lincolnguessr() {
 					</p>
 					<div className="flex justify-center">
 						<Link
-							target="_blank"
 							className="bg-charcoal font-bold text-offwhite dark:bg-offwhite dark:text-charcoal rounded py-2 px-4 hover:scale-105 transition-all duration-300"
 							href="/lincolnguessr"
 						>
