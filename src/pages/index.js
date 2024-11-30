@@ -7,6 +7,12 @@ import toast from "react-hot-toast";
 import { FiChevronDown } from "react-icons/fi";
 import Link from "next/link";
 import ImageGallery from "@/components/imageGallery";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+	faBoltLightning,
+	faBook,
+	faMedal,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
 	const router = useRouter();
@@ -87,7 +93,7 @@ export default function Home() {
 					</div>
 					{/* Header */}
 					<div className="text-center text-xl">
-						<p className="font-bold">{nameText}</p>
+						<p className="font-bold text-2xl">{nameText}</p>
 						<p>{headerText || "C"}</p>
 					</div>
 				</div>
@@ -112,7 +118,7 @@ export default function Home() {
 			>
 				{/* section header */}
 				<div>
-					<h1 className="font-bold uppercase">Project Showcase</h1>
+					<h1 className="font-bold text-lg uppercase">Project Showcase</h1>
 				</div>
 				{/* div for the projects */}
 				<div className="w-full h-full md:w-[80vw] p-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -131,24 +137,9 @@ export default function Home() {
 						emphasizedTags={["Team Lead"]}
 						imageSrc="/images/sus.png"
 						imgContain
-						href="https://main.d1jtfh29tegizz.amplifyapp.com/"
-						openInNewTab
+						href="/projects/sus-contracting"
 					/>
-					<ProjectCard
-						projectName="LincolnGuessr"
-						description="A geoguessr clone for the town of Lincoln, Ontario."
-						tags={[
-							"React",
-							"Next.js",
-							"HTML",
-							"JS",
-							"CSS",
-							"Strapi",
-							"styled jsx",
-						]}
-						imageSrc="/images/lincolnGuessr.jpg"
-						href="/lincolnguessr"
-					/>
+
 					<ProjectCard
 						projectName="WMBA"
 						description="A baseball scorekeeping application."
@@ -161,12 +152,25 @@ export default function Home() {
 							"JQuery",
 							"Bootstrap",
 						]}
-						emphasizedTags={["School Community Project Winner"]}
+						emphasizedTags={["Community Project Winner"]}
 						openInNewTab
 						href="/projects/wmba"
 						imageSrc="/images/wmba/logo/logo.jpg"
 					/>
+					<ProjectCard
+						projectName="Contoso Data Analysis"
+						description="A PowerBI dashboard detailing sales analytics for Contoso Retailers for years 2007, 2008, 2009."
+						tags={["PowerBI", "Data Analysis", "Data Warehousing"]}
+						href="/projects/contoso"
+						imageSrc="/images/contoso.jpg"
+					/>
 				</div>
+				<Link
+					className="bg-charcoal font-bold text-offwhite dark:bg-offwhite dark:text-charcoal rounded py-2 px-4 hover:scale-105 transition-all duration-300"
+					href={"/projects"}
+				>
+					See More Projects
+				</Link>
 				{/* Down Arrow */}
 				<div
 					className="flex flex-col items-center animate-bounce hover:cursor-pointer mt-4"
@@ -183,11 +187,11 @@ export default function Home() {
 			{/* Bio / Mission Statement */}
 			<div
 				ref={bioRef}
-				className="relative h-screenMinusNavbar flex flex-col gap-8 px-2 md:px-6"
+				className="relative min-h-screenMinusNavbar flex flex-col justify-center gap-8 px-2 py-4 md:px-6 items-center"
 			>
 				{/* Biography */}
-				<section>
-					<h2 className="font-bold text-lg">Biography</h2>
+				<section className="max-w-4xl">
+					<h2 className="font-bold text-xl text-center">BIOGRAPHY</h2>
 					<p>
 						I am a Web Development Team Lead at a non-profit organization,
 						guiding a team of four in building websites for local businesses. My
@@ -205,24 +209,50 @@ export default function Home() {
 					</p>
 				</section>
 				{/* Mission */}
-				<section>
-					<h2 className="font-bold text-lg">Mission</h2>
-					<div className="grid gap-2">
-						<p>
-							<strong>Continuous Learning:</strong> Expanding my knowledge
-							drives creativity and helps me build adaptable, impactful
-							applications.
-						</p>
-						<p>
-							<strong>Empowering People Through Efficiency:</strong> I strive to
-							simplify processes, enhancing productivity so people can focus on
-							what matters most.
-						</p>
-						<p>
-							<strong>Focused Independence Creates Quality:</strong> I perform
-							best in environments with autonomy, allowing deep focus and
-							high-quality results.
-						</p>
+				<section className="max-w-5xl text-center">
+					<h2 className="font-bold text-xl mb-4">MISSION</h2>
+					<div className="grid sm:grid-cols-3 gap-4">
+						<div className="grid">
+							<div>
+								<FontAwesomeIcon
+									icon={faBook}
+									className="text-center w-12 h-12"
+								/>
+							</div>
+							<span className="font-bold">Continuous Learning</span>
+							<p>
+								Expanding my knowledge drives creativity and helps me build
+								adaptable, impactful applications.
+							</p>
+						</div>
+						<div className="grid">
+							<div>
+								<FontAwesomeIcon
+									icon={faBoltLightning}
+									className="text-center w-12 h-12"
+								/>
+							</div>
+							<span className="font-bold ">
+								Empowering People Through Efficiency
+							</span>
+							<p>
+								I strive to simplify processes, enhancing productivity so people
+								can focus on what matters most.
+							</p>
+						</div>
+						<div className="grid">
+							<div>
+								<FontAwesomeIcon
+									icon={faMedal}
+									className="text-center w-12 h-12"
+								/>
+							</div>
+							<span className="font-bold">Create Quality</span>
+							<p>
+								I perform best in environments with autonomy, allowing deep
+								focus and high-quality results.
+							</p>
+						</div>
 					</div>
 				</section>
 			</div>
