@@ -7,7 +7,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-export default function ImageGallery({ imageFolderPath = "/images" }) {
+export default function ImageGallery({
+	imageFolderPath = "/images",
+	contain = false,
+}) {
 	const [images, setImages] = useState([]);
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -85,7 +88,7 @@ export default function ImageGallery({ imageFolderPath = "/images" }) {
 					src={`${imageFolderPath}/${images[currentIndex]}`}
 					alt={`Slide ${currentIndex + 1}`}
 					fill={true}
-					className="object-cover rounded"
+					className={`${contain ? "object-contain" : "object-cover"} rounded`}
 				/>
 			</div>
 
