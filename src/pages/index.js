@@ -162,7 +162,7 @@ export default function Home() {
 						description="A PowerBI dashboard detailing sales analytics for Contoso Retailers for years 2007, 2008, 2009."
 						tags={["PowerBI", "Data Analysis", "Data Warehousing"]}
 						href="/projects/contoso"
-						imageSrc="/images/contoso.jpg"
+						imageSrc="/images/contoso/contoso.jpg"
 					/>
 				</div>
 				<Link
