@@ -153,7 +153,6 @@ export default function Home() {
 							"Bootstrap",
 						]}
 						emphasizedTags={["Community Project Winner"]}
-						openInNewTab
 						href="/projects/wmba"
 						imageSrc="/images/wmba/logo/logo.jpg"
 					/>
