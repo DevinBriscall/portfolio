@@ -232,7 +232,7 @@ export default function Home() {
 								/>
 							</div>
 							<span className="font-bold ">
-								Empowering People Through Efficiency
+								Empower People Through Efficiency
 							</span>
 							<p>
 								I strive to simplify processes, enhancing productivity so people
