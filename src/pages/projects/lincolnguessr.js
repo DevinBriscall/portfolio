@@ -9,7 +9,7 @@ export default function lincolnguessr() {
 				<div className="relative h-52 md:h-[50vh] w-full">
 					<Image
 						alt="sus-contracting logo"
-						src={"/images/lincolnguessr.jpg"}
+						src={"/images/lincolnGuessr.jpg"}
 						fill="true"
 						className="object-contain rounded p-4"
 					/>
