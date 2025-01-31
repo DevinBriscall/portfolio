@@ -29,6 +29,22 @@ export default function index() {
 					imageSrc="/images/wmba/logo/logo.jpg"
 				/>
 				<ProjectCard
+					projectName="Developer Hub"
+					description="A hub I made for new Civiconnect employees to learn about various web development concepts and programming languages."
+					tags={[
+						"React",
+						"Next.js",
+						"HTML",
+						"JS",
+						"CSS",
+						"Strapi",
+						"styled jsx",
+					]}
+					emphasizedTags={["Teaching Resource"]}
+					imageSrc="/images/developer-hub/hub.jpg"
+					href="projects/developer-hub"
+				/>
+				<ProjectCard
 					projectName="Contoso Retail Data Analysis"
 					description="A PowerBI dashboard detailing sales analytics for Contoso Retailers for years 2007, 2008, 2009."
 					tags={["PowerBI", "Data Ananlysis", "Data Warehousing"]}
