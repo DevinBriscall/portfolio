@@ -8,7 +8,7 @@ import Button from "./Button";
 
 export default function ConfirmationPopup({
 	buttonsText = ["Quit", "Cancel"],
-	message = "Are you sure you want to quit? Points will NOT be saved.",
+	message = "Are you sure you want to quit?",
 	onConfirm = () => {},
 	onCancel = () => {},
 }) {
