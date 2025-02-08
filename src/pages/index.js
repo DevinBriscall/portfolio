@@ -79,7 +79,7 @@ export default function Home() {
 				<div className="flex-grow flex flex-col items-center justify-center ">
 					{/* Profile Image */}
 					<div
-						className={`rounded-full hover:scale-105 w-[280px] h-[280px] drop-shadow-lg mb-5 transition-all duration-1000 ${
+						className={`rounded-full relative hover:scale-105 w-[280px] h-[280px] drop-shadow-lg mb-5 transition-all duration-1000 ${
 							fadeImageIn ? "opacity-100 " : "opacity-0 "
 						}`}
 					>
