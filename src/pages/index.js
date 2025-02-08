@@ -19,7 +19,7 @@ export default function Home() {
 	const [headerText, setHeaderText] = useState(""); // State for the rendered text
 	const [fadeImageIn, setFadeImageIn] = useState(false);
 	const nameText = "Devin Briscall";
-	const descriptionText = "Computer Programmer Analyst.";
+	const descriptionText = "Web Developer";
 	const tempTextRef = useRef("");
 	const bioRef = useRef(null);
 	const projectsRef = useRef(null);
@@ -94,7 +94,7 @@ export default function Home() {
 					{/* Header */}
 					<div className="text-center text-xl">
 						<p className="font-bold text-2xl">{nameText}</p>
-						<p>{headerText || "C"}</p>
+						<p>{headerText || "D"}</p>
 					</div>
 				</div>
 
