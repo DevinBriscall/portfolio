@@ -7,6 +7,7 @@ const saira = Saira({ subsets: ["latin"] });
 import { Providers } from "@/components/providers";
 import { useRouter } from "next/router";
 import ThemeSwitch from "@/components/ThemeSwitch";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
 	const [isMounted, setIsMounted] = useState(false);
@@ -24,6 +25,32 @@ export default function App({ Component, pageProps }) {
 					font-family: ${saira.style.fontFamily};
 				}
 			`}</style>
+
+			<Head>
+				<title>Devin Briscall | Web Developer</title>
+				<meta
+					name="description"
+					content="Experienced Web Developer & Team Lead skilled in Next.js, React, Strapi, Supabase, and full-stack development. Passionate about building efficient and scalable web applications."
+				/>
+				<meta
+					name="keywords"
+					content="Devin Briscall, Web Developer, Next.js, React, Supabase, Strapi, JavaScript, Full-Stack Developer, Software Engineer, Frontend, Backend"
+				/>
+				<meta name="author" content="Devin Briscall" />
+				<meta property="og:title" content="Devin Briscall | Web Developer" />
+				<meta
+					property="og:description"
+					content="Experienced Web Developer & Team Lead skilled in Next.js, React, and full-stack development."
+				/>
+				<meta property="og:url" content="https://www.devinbriscall.com" />
+				<meta property="og:type" content="website" />
+				<meta
+					property="og:image"
+					content="https://www.devinbriscall.com/images/profile.png"
+				/>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<link rel="icon" href="/images/favicon.png" />
+			</Head>
 
 			<main className="bg-primary-light dark:bg-primary-dark transition-colors duration-700">
 				<Providers>
