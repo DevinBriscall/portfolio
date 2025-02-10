@@ -31,7 +31,7 @@ export default function SusContracting() {
 						<Link
 							target="_blank"
 							className="bg-charcoal font-bold text-offwhite dark:bg-offwhite dark:text-charcoal rounded py-2 px-4 hover:scale-105 transition-all duration-300"
-							href="https://main.d1jtfh29tegizz.amplifyapp.com/"
+							href="https://suscontractinginc.com/"
 						>
 							See the site
 						</Link>
