@@ -11,9 +11,36 @@ export default function index() {
 			{/* div for the projects */}
 			<div className="w-full h-full md:w-[80vw] p-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
 				<ProjectCard
+					projectName="Routine River"
+					description="A task managing app that I developed to help users reduce context switching and be more productive."
+					tags={[
+						"React",
+						"Next.js",
+						"HTML",
+						"JS",
+						"CSS",
+						"Supabase",
+						"Tailwind",
+						"Stripe",
+					]}
+					emphasizedTags={["Passion Project", "Solo Dev"]}
+					imageSrc="/images/routine-river/logo.png"
+					imgContain
+					href="https://routineriver.com"
+					openInNewTab={true}
+				/>
+				<ProjectCard
 					projectName="SUS Contracting"
 					description="A public facing website for a construction company."
-					tags={["React", "Next.js", "HTML", "JS", "CSS", "Strapi", "Tailwind"]}
+					tags={[
+						"React",
+						"Next.js",
+						"HTML",
+						"JS",
+						"CSS",
+						"Strapi",
+						"Tailwind",
+					]}
 					emphasizedTags={["Team Lead"]}
 					imageSrc="/images/sus.png"
 					imgContain
@@ -23,7 +50,15 @@ export default function index() {
 				<ProjectCard
 					projectName="WMBA"
 					description="A baseball scorekeeping application."
-					tags={["C#", ".NET", "EF Core", "JSON", "JS", "JQuery", "Bootstrap"]}
+					tags={[
+						"C#",
+						".NET",
+						"EF Core",
+						"JSON",
+						"JS",
+						"JQuery",
+						"Bootstrap",
+					]}
 					emphasizedTags={["School Community Project Winner"]}
 					href="/projects/wmba"
 					imageSrc="/images/wmba/logo/logo.jpg"

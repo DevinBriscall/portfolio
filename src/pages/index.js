@@ -62,7 +62,8 @@ export default function Home() {
 		if (projectsRef.current) {
 			// Get the position of the element
 			const targetPosition =
-				projectsRef.current.getBoundingClientRect().top + window.pageYOffset;
+				projectsRef.current.getBoundingClientRect().top +
+				window.pageYOffset;
 
 			// Scroll to the target position with an offset of 68px
 			window.scrollTo({
@@ -118,10 +119,31 @@ export default function Home() {
 			>
 				{/* section header */}
 				<div>
-					<h1 className="font-bold text-lg uppercase">Project Showcase</h1>
+					<h1 className="font-bold text-lg uppercase">
+						Project Showcase
+					</h1>
 				</div>
 				{/* div for the projects */}
 				<div className="w-full h-full md:w-[80vw] p-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+					<ProjectCard
+						projectName="Routine River"
+						description="A task managing app that I developed to help users reduce context switching and be more productive."
+						tags={[
+							"React",
+							"Next.js",
+							"HTML",
+							"JS",
+							"CSS",
+							"Supabase",
+							"Tailwind",
+							"Stripe",
+						]}
+						emphasizedTags={["Passion Project", "Solo Dev"]}
+						imageSrc="/images/routine-river/logo.png"
+						imgContain
+						href="https://routineriver.com"
+						openInNewTab={true}
+					/>
 					<ProjectCard
 						projectName="SUS Contracting"
 						description="A public facing website for a construction company."
@@ -156,13 +178,6 @@ export default function Home() {
 						href="/projects/wmba"
 						imageSrc="/images/wmba/logo/logo.jpg"
 					/>
-					<ProjectCard
-						projectName="Contoso Data Analysis"
-						description="A PowerBI dashboard detailing sales analytics for Contoso Retailers for years 2007, 2008, 2009."
-						tags={["PowerBI", "Data Analysis", "Data Warehousing"]}
-						href="/projects/contoso"
-						imageSrc="/images/contoso/contoso.jpg"
-					/>
 				</div>
 				<Link
 					className="bg-charcoal font-bold text-offwhite dark:bg-offwhite dark:text-charcoal rounded py-2 px-4 hover:scale-105 transition-all duration-300"
@@ -192,19 +207,22 @@ export default function Home() {
 				<section className="max-w-4xl">
 					<h2 className="font-bold text-xl text-center">BIOGRAPHY</h2>
 					<p>
-						I am a Web Development Team Lead at a non-profit organization,
-						guiding a team of four in building websites for local businesses. My
-						skills in React, JavaScript, SQL, and C# enable me to develop
-						efficient solutions that meet clients&apos; needs.
+						I am a Web Development Team Lead at a non-profit
+						organization, guiding a team of four in building
+						websites for local businesses. My skills in React,
+						JavaScript, SQL, and C# enable me to develop efficient
+						solutions that meet clients&apos; needs.
 					</p>
 					<p className="mt-4">
-						Recently, I created an app for a restaurant owner to streamline
-						supplier communication and price comparison, reinforcing my
-						commitment to solving real-world problems. I am also enrolled in the
-						Computer Programming and Analysis Co-op program at Niagara College,
-						maintaining a 97% GPA across four completed terms. Outside of work,
-						I&apos;m a self-taught musician in piano, drums, and guitar,
-						reflecting my passion for continuous learning.
+						Recently, I created an app for a restaurant owner to
+						streamline supplier communication and price comparison,
+						reinforcing my commitment to solving real-world
+						problems. I am also enrolled in the Computer Programming
+						and Analysis Co-op program at Niagara College,
+						maintaining a 97% GPA across four completed terms.
+						Outside of work, I&apos;m a self-taught musician in
+						piano, drums, and guitar, reflecting my passion for
+						continuous learning.
 					</p>
 				</section>
 				{/* Mission */}
@@ -218,10 +236,13 @@ export default function Home() {
 									className="text-center w-12 h-12"
 								/>
 							</div>
-							<span className="font-bold">Continuous Learning</span>
+							<span className="font-bold">
+								Continuous Learning
+							</span>
 							<p>
-								Expanding my knowledge drives creativity and helps me build
-								adaptable, impactful applications.
+								Expanding my knowledge drives creativity and
+								helps me build adaptable, impactful
+								applications.
 							</p>
 						</div>
 						<div className="grid">
@@ -235,8 +256,9 @@ export default function Home() {
 								Empower People Through Efficiency
 							</span>
 							<p>
-								I strive to simplify processes, enhancing productivity so people
-								can focus on what matters most.
+								I strive to simplify processes, enhancing
+								productivity so people can focus on what matters
+								most.
 							</p>
 						</div>
 						<div className="grid">
@@ -248,8 +270,8 @@ export default function Home() {
 							</div>
 							<span className="font-bold">Create Quality</span>
 							<p>
-								I perform best in environments with autonomy, allowing deep
-								focus and high-quality results.
+								I perform best in environments with autonomy,
+								allowing deep focus and high-quality results.
 							</p>
 						</div>
 					</div>
