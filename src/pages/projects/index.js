@@ -32,15 +32,7 @@ export default function index() {
 				<ProjectCard
 					projectName="SUS Contracting"
 					description="A public facing website for a construction company."
-					tags={[
-						"React",
-						"Next.js",
-						"HTML",
-						"JS",
-						"CSS",
-						"Strapi",
-						"Tailwind",
-					]}
+					tags={["React", "Next.js", "HTML", "JS", "CSS", "Strapi", "Tailwind"]}
 					emphasizedTags={["Team Lead"]}
 					imageSrc="/images/sus.png"
 					imgContain
@@ -48,17 +40,19 @@ export default function index() {
 				/>
 
 				<ProjectCard
+					projectName="Angel's Craft Corner"
+					description="A retail website for home-made crafts."
+					tags={["React", "Next.js", "HTML", "JS", "CSS", "Strapi", "Tailwind"]}
+					emphasizedTags={["Team Lead", "Stripe Integrated"]}
+					href="/projects/angels"
+					imageSrc="/images/angels/logo-red.png"
+					imgContain={true}
+				/>
+
+				<ProjectCard
 					projectName="WMBA"
 					description="A baseball scorekeeping application."
-					tags={[
-						"C#",
-						".NET",
-						"EF Core",
-						"JSON",
-						"JS",
-						"JQuery",
-						"Bootstrap",
-					]}
+					tags={["C#", ".NET", "EF Core", "JSON", "JS", "JQuery", "Bootstrap"]}
 					emphasizedTags={["School Community Project Winner"]}
 					href="/projects/wmba"
 					imageSrc="/images/wmba/logo/logo.jpg"
