@@ -27,20 +27,23 @@ export default function App({ Component, pageProps }) {
 			`}</style>
 
 			<Head>
-				<title>Devin Briscall | Web Developer</title>
+				<title>Devin Briscall | Software Engineer</title>
 				<meta
 					name="description"
-					content="Experienced Web Developer & Team Lead skilled in Next.js, React, Strapi, Supabase, and full-stack development. Passionate about building efficient and scalable web applications."
+					content="Experienced Software Developer & Team Lead skilled in Next.js, React, Strapi, Supabase, and full-stack development. Passionate about building efficient and scalable web applications."
 				/>
 				<meta
 					name="keywords"
-					content="Devin Briscall, Web Developer, Next.js, React, Supabase, Strapi, JavaScript, Full-Stack Developer, Software Engineer, Frontend, Backend"
+					content="Devin Briscall, Software Engineer, Next.js, React, Supabase, Strapi, JavaScript, Full-Stack Developer, Software Engineer, Frontend, Backend"
 				/>
 				<meta name="author" content="Devin Briscall" />
-				<meta property="og:title" content="Devin Briscall | Web Developer" />
+				<meta
+					property="og:title"
+					content="Devin Briscall | Software Engineer"
+				/>
 				<meta
 					property="og:description"
-					content="Experienced Web Developer & Team Lead skilled in Next.js, React, and full-stack development."
+					content="Experienced Software Engineer & Team Lead skilled in Next.js, React, and full-stack development."
 				/>
 				<meta property="og:url" content="https://www.devinbriscall.com" />
 				<meta property="og:type" content="website" />
