@@ -204,19 +204,36 @@ export default function Home() {
 				<section className="max-w-4xl">
 					<h2 className="font-bold text-xl text-center">BIOGRAPHY</h2>
 					<p>
-						I am a Web Development Team Lead at a non-profit organization,
-						guiding a team of four in building websites for local businesses. My
-						skills in React, JavaScript, SQL, and C# enable me to develop
-						efficient solutions that meet clients&apos; needs.
+						I am a Software Engineer and Web Development Team Lead with
+						experience in full-stack development, project leadership, and
+						technical mentorship. My expertise in Next.js, Supabase, Strapi,
+						JavaScript, SQL, and C# allows me to build scalable and efficient
+						solutions tailored to client needs.
 					</p>
 					<p className="mt-4">
-						Recently, I created an app for a restaurant owner to streamline
-						supplier communication and price comparison, reinforcing my
-						commitment to solving real-world problems. I am also enrolled in the
-						Computer Programming and Analysis Co-op program at Niagara College,
-						maintaining a 97% GPA across four completed terms. Outside of work,
-						I&apos;m a self-taught musician in piano, drums, and guitar,
-						reflecting my passion for continuous learning.
+						Most recently, I led a team of developers at Civiconnect, overseeing
+						sprint planning, pull requests, and standups while mentoring team
+						members in modern web technologies. To improve onboarding, I created
+						a developer resource hub with structured guides and hands-on
+						examples.
+					</p>
+					<p className="mt-4">
+						Beyond leadership, I have built applications that solve real-world
+						problems, including{" "}
+						<strong>
+							<a target="_blank" href="https://www.routineriver.com">
+								Routine River
+							</a>
+						</strong>{" "}
+						a study app designed to help users stay focused with integrated
+						flashcards, materials, and practice routines. I am a graduate of the
+						Computer Programming and Analysis Co-op program at Niagara College
+						with a 97% GPA.
+					</p>
+					<p className="mt-4">
+						Outside of development, I&apos;m a self-taught musician in piano,
+						drums, and guitar, reflecting my passion for continuous learning and
+						creativity.
 					</p>
 				</section>
 				{/* Mission */}
