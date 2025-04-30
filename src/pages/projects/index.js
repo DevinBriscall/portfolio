@@ -39,15 +39,15 @@ export default function index() {
 					href="/projects/sus-contracting"
 				/>
 
-				{/* <ProjectCard
+				<ProjectCard
 					projectName="Angel's Craft Corner"
 					description="A retail website for home-made crafts."
 					tags={["React", "Next.js", "HTML", "JS", "CSS", "Strapi", "Tailwind"]}
 					emphasizedTags={["Team Lead", "Stripe Integrated"]}
 					href="/projects/angels"
-					imageSrc="/images/angels/logo-red.png"
+					imageSrc="/images/angels/logo-green.webp"
 					imgContain={true}
-				/> */}
+				/>
 
 				<ProjectCard
 					projectName="WMBA"

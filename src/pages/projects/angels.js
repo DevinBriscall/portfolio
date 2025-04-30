@@ -9,7 +9,7 @@ export default function SusContracting() {
 				<div className="relative h-36 w-full">
 					<Image
 						alt="angel's craft corner logo"
-						src={"/images/angels/logo-red.png"}
+						src={"/images/angels/logo-green.webp"}
 						fill="true"
 						className="object-contain bg-charcoal rounded p-4"
 					/>
@@ -33,7 +33,7 @@ export default function SusContracting() {
 						<Link
 							target="_blank"
 							className="bg-charcoal font-bold text-offwhite dark:bg-offwhite dark:text-charcoal rounded py-2 px-4 hover:scale-105 transition-all duration-300"
-							href="https://main.d6v8rcrcqf6we.amplifyapp.com/"
+							href="https://angelscraftcorner.ca/"
 						>
 							See the site
 						</Link>
